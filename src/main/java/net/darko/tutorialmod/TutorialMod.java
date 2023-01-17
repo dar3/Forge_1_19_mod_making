@@ -1,6 +1,7 @@
 package net.darko.tutorialmod;
 
 import com.mojang.logging.LogUtils;
+import net.darko.tutorialmod.block.ModBlocks;
 import net.darko.tutorialmod.item.ModItems;
 import net.minecraftforge.api.distmarker.Dist;
 import net.minecraftforge.common.MinecraftForge;
@@ -28,6 +29,7 @@ public class TutorialMod
         IEventBus modEventBus = FMLJavaModLoadingContext.get().getModEventBus();
 
         ModItems.register(modEventBus);
+        ModBlocks.register(modEventBus);
 
         modEventBus.addListener(this::commonSetup);
 
